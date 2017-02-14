@@ -1,0 +1,25 @@
+{
+  "name": "docker-base-nodejs",
+  "description": "Docker Base: NodeJS",
+  "author": "Eduardo Cuomo <reduardo7@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:reduardo7/docker-base-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reduardo7/docker-base-nodejs/issues"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node --debug=5858 app.js"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "config": "^1.25.1",
+    "express": "latest",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.1"
+  },
+  "private": true,
+  "license": "MIT"
+}

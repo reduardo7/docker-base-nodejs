@@ -1,0 +1,13 @@
+{
+  "db": {
+    "connection": {
+      "database": "app",
+      "user": "root",
+      "password": "root",
+      "host": "db-host"
+    },
+    "check": {
+      "interval": 5
+    }
+  }
+}
