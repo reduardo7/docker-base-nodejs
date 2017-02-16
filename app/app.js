@@ -3,29 +3,11 @@ const express = require('express');
 const app = express();
 const config = require('config');
 const co = require('co');
-const mysql = require('mysql');
+const connect = require('./db/connect-mysql.js')
 
 const config_db = config.get('db');
 
-function connectToDB(onConnect) {
-  console.log('Waiting for MySQL server...');
-
-  var connection = mysql.createConnection(config_db.connection);
-  connection.connect();
-
-  connection.query('SELECT 1 AS solution', (err, rows, fields) => {
-    if (err) {
-      setTimeout(() => connectToDB(onConnect), config_db.check.interval * 1000);
-    } else {
-      console.log('MySQL connected!');
-      onConnect.apply();
-    }
-  });
-
-  connection.end();
-};
-
-connectToDB(() => {
+connect(() => {
   console.log('Starting app...');
   const sequelize = new Sequelize(config_db.connection.database, config_db.connection.user, config_db.connection.password, { host: config_db.connection.host });
 
