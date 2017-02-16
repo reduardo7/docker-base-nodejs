@@ -11,14 +11,16 @@
   },
   "main": "app.js",
   "scripts": {
-    "start": "node --debug=5858 app.js"
+    "run-mysql": "node --debug=5858 app-mysql.js",
+    "run-mongo": "node --debug=5858 app-mongo.js"
   },
   "dependencies": {
     "co": "^4.6.0",
     "config": "^1.25.1",
     "express": "latest",
     "mysql": "^2.13.0",
-    "sequelize": "^3.30.1"
+    "sequelize": "^3.30.1",
+    "mongodb": "^2.0.25"
   },
   "private": true,
   "license": "MIT"

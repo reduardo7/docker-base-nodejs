@@ -1,7 +1,7 @@
 const config = require('config');
 const mysql = require('mysql');
 
-const config_db = config.get('db');
+const config_db = config.get('db.mysql');
 
 function connect(onConnect) {
   console.log('Waiting for MySQL server...');

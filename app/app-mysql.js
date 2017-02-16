@@ -5,7 +5,7 @@ const config = require('config');
 const co = require('co');
 const connect = require('./db/connect-mysql.js')
 
-const config_db = config.get('db');
+const config_db = config.get('db.mysql');
 
 connect(() => {
   console.log('Starting app...');

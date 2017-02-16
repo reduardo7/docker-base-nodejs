@@ -1,13 +1,27 @@
 {
   "db": {
-    "connection": {
-      "database": "app",
-      "user": "root",
-      "password": "root",
-      "host": "db-host"
+    "mysql": {
+      "connection": {
+        "database": "app",
+        "user": "root",
+        "password": "root",
+        "host": "127.0.0.1"
+      },
+      "check": {
+        "interval": 5
+      }
     },
-    "check": {
-      "interval": 5
+    "mongo": {
+      "connection": {
+        "database": "demo",
+        "user": "root",
+        "password": "root",
+        "host": "127.0.0.1",
+        "port": 27017
+      },
+      "check": {
+        "interval": 1
+      }
     }
   }
 }

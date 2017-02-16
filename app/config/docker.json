@@ -1,1 +1,14 @@
-{}
+{
+  "db": {
+    "mysql": {
+      "connection": {
+        "host": "db-host"
+      }
+    },
+    "mongo": {
+      "connection": {
+        "host": "db-mongo"
+      }
+    }
+  }
+}
